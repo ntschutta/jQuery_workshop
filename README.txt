@@ -19,3 +19,9 @@ You'll also notice an index.html - this file contains links to various helpful r
 The labs are found, shockingly, in the labs folder. The shells for all the examples are there - named, I hope, in a meaningful way. For those that like to read ahead, the lab_finished folder contains...you know, if you can't figure that out on your own, you should probably just delete this directory right now.
 
 Anyway, I hope this workshop is fun, meaningful and helps you get a solid understanding of just what jQuery can do. I'm particularly excited about jQuery mobile...I think that's going to be a Really Big Deal (TM).
+
+For those that are curious about *me*, here's my bio:
+Nathaniel T. Schutta is a senior software engineer focussed on making usable applications. A proponent of polyglot programming, Nate has written two books on Ajax and speaks regularly at various worldwide conferences, No Fluff Just Stuff symposia, universities, and Java user groups. In addition to his day job, Nate is an adjunct professor at the University of Minnesota where he teaches students to embrace dynamic languages.
+
+You can follow me on Twitter: @ntschutta
+You can read my mostly dead blog: http://www.ntschutta.com/jat/
