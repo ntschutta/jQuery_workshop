@@ -1,0 +1,8 @@
+Date Picker Lab
+
+* Take the standard date picker
+* Add some configuration
+  * Change the animation
+  * Display 2 months
+  * Display the button bar
+* ${extract}/jquery_workshop/labs/datepicker/datePicker.html

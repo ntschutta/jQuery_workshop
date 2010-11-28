@@ -1,0 +1,14 @@
+CSS Selector Lab
+
+Part 1
+* Attach a click event to every “header”
+* When clicked, hide or show the div beneath the header
+* ${extract}/jquery_workshop/labs/css_selectors/hideShowAjaxjQuery.html
+
+Part 2
+* Apply an effect
+* Change the triangle image to match the open/closed state
+
+Accordion Lab
+* Wrap the contact info page in an accordion
+* ${extract}/jquery_workshop/labs/css_selectors/hideShowAjaxjQueryAccordion.html

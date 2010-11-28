@@ -1,0 +1,6 @@
+Themes Lab
+
+* Go to the ThemeRoller http://jqueryui.com/themeroller/
+* Modify an existing theme
+* Apply said theme
+* Use any of the preceding UI examples

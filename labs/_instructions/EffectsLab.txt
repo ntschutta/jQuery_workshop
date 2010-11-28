@@ -1,0 +1,7 @@
+Effects Lab
+
+* One last twist on the dynamic list - add an effect when the element is added
+* ${extract}/jquery_workshop/labs/events/dynamicList.html
+* Return to the CSS lab
+* Add a different effect
+* ${extract}/jquery_workshop/labs/css_selectors/hideShowAjaxjQuery.html

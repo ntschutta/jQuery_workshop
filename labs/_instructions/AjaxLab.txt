@@ -1,0 +1,17 @@
+Ajax Lab
+
+Part 1
+* Call the validation routine on server
+* Use GET, expect JSON
+* URI: "/DesigningForAjax/json"
+* Use a highlight effect
+* Bind to events!
+* ${extract}/jquery_workshop/jetty/webapps/jQueryWorkshop/validation/validation.html
+
+JSON Format: {"message":"Invalid zip, city, state combo.","invalid":true}
+
+Part 2
+* Change the style based on outcome
+* Use the valid class if the validation passes, invalid if it fails
+* ${extract}/jquery_workshop/jetty/webapps/jQueryWorkshop/validation/validation_css.html
+

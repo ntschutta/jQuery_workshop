@@ -1,0 +1,7 @@
+jQuery Mobile Lab
+
+* Trip Planner Mobile
+* Create a simple trip app
+* Splash page, list of trips, trip details
+* jQuery Mobile...still alpha ;)
+* ${extract}/jquery_workshop/labs/mobile/mobileTripPlanner.html

@@ -1,0 +1,27 @@
+Plugin Lab
+
+Part 1
+* Let’s add a method to jQuery!
+* Using the closure approach, add a “log” method (or something similar) to jQuery
+* Execute said method in a manner of your choosing
+* ${extract}/jquery_workshop/labs/plugins/jQuery.html
+
+Part 2
+* Let’s add another method to jQuery
+* Create a method that returns the height of the tallest element on the page
+* Math.max(x,y)
+* Execute said method in a manner of your choosing
+* ${extract}/jquery_workshop/labs/plugins/jQuery.html
+
+Part 3
+* Create a plugin that gives us table hover
+* When you mouse over a row, highlight the row - i.e., change the class
+* Abstract said code to a separate JS file
+* ${extract}/jquery_workshop/labs/plugins/tablehover.html
+* ${extract}/jquery_workshop/labs/plugins/jquery.ui.tablehover
+
+Part 4
+* Wrap the jQuery UI datepicker
+* “Change” the defaults so instances of mycal have a different animation and have a button panel
+* ${extract}/jquery_workshop/labs/plugins/datePickerPlugin.html
+* ${extract}/jquery_workshop/labs/plugins/jquery.ui.mycal.js

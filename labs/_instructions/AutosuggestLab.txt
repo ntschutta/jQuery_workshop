@@ -1,0 +1,5 @@
+Autosuggest Lab
+
+* Turn the ice cream input into an autosuggest widget
+* The source array is already there ;)
+* ${extract}/jquery_workshop/labs/autosuggest/suggestAjaxjQuery.html

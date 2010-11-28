@@ -1,0 +1,14 @@
+Dialog Lab
+
+Part 1
+* Some of the code is already there...
+* You need to (look for //comments):
+  * define the appropriate variables
+  * add the dialog configuration
+  * add the button code
+* ${extract}/jquery_workshop/labs/dialog/dialogjQuery.html
+
+Part 2
+* Let’s add an effect!
+* Highlight the row that’s added
+* ${extract}/jquery_workshop/labs/dialog/dialogjQuery.html

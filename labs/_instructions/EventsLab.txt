@@ -1,0 +1,11 @@
+Event Lab
+
+Part 1
+* Dynamic lists!
+* When a user clicks on a list item, add another list item
+* ${extract}/jquery_workshop/labs/events/dynamicList.html
+
+Part 2
+* Return to the dynamic list...
+* But use live() so that *new* elements are clickable too
+* ${extract}/jquery_workshop/labs/events/dynamicList.html

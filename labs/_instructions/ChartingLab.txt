@@ -1,0 +1,12 @@
+Charting Lab
+
+* Using Google Chart, create a simple line chart
+* Create a simple pie chart of language market share - Java, C#, Ruby, Clojure, etc.
+* Create a Venn diagram showing the developers that know Java, C# and Clojure
+* ${extract}/jquery_workshop/labs/charting/charting.html
+
+Sparklines Lab
+* Using jQuery Sparklines, create some simple sparklines
+* For example: change in Apple/Google/MS stock over the last year
+* Create a sparkline that shows negative values
+* ${extract}/jquery_workshop/labs/charting/sparklines.html
