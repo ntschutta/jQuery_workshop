@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>Date Example - Ajax (jQuery)</title>
+    <link type="text/css" href="../themes/ui-lightness/jquery.ui.all.css" rel="stylesheet" />
+    <script src="../javascript/jquery.js" type="text/javascript"></script>
+    <script src="../javascript/jqueryUI/jquery.effects.core.js" type="text/javascript"></script>
+    <script src="../javascript/jqueryUI/jquery.effects.drop.js" type="text/javascript"></script>
+    <script src="../javascript/jqueryUI/jquery.effects.pulsate.js" type="text/javascript"></script>
+    <script src="../javascript/jqueryUI/jquery.ui.core.js" type="text/javascript"></script>
+    <script src="../javascript/jqueryUI/jquery.ui.datepicker.js" type="text/javascript"></script>
+    <script type="text/javascript">
+	$(function() {
+		$(".datepicker").datepicker();
+	});  </script>
+  </head>
+  <body class="">
+    <h1>Really Simple Address Book</h1>
+    <div class="demo">
+    <form>
+      <table>
+        <tbody>
+          <tr><td>Name: </td><td><input type="text" name="name"/></td></tr>
+          <tr><td>Email: </td><td><input type="text" name="email"/></td></tr>
+          <tr><td>Phone: </td><td><input type="text" name="phone"/></td></tr>
+          <tr><td>Street: </td><td><input type="text" name="street"/></td></tr>
+          <tr>
+            <td>City: </td><td><input type="text" id="city"/></td>
+            <td>State: </td><td><input type="text" id="state" size="2" maxlength="2"/></td>
+            <td>Zip: </td><td><input type="text" id="zip" size="5" maxlength="5"/></td>
+          </tr>
+          <tr>
+            <td>Website: </td><td><input type="text" name="website"/></td>
+          </tr>
+          <tr>
+            <td>IM: </td><td><input type="text" name="im"/></td>
+          </tr>
+          <tr>
+            <td>Birthday: </td>
+            <td>
+                <input type="text" id="foo" class="datepicker"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <input type="button" name="submit" value="Save"/>
+    </form>
+    </div>
+  </body>
+</html>

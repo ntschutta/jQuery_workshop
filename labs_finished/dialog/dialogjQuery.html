@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <title>Lightbox Page Example - Ajax (jQuery)</title>
+        <link type="text/css" href="../themes/ui-lightness/jquery.ui.all.css" rel="stylesheet" />
+
+        <script src="../javascript/jquery-1.4.3.js" type="text/javascript"></script>
+        <script src="../javascript/jqueryUI/jquery.ui.core.js" type="text/javascript"></script>
+        <script src="../javascript/jqueryUI/jquery.ui.widget.js" type="text/javascript" ></script>
+        <script src="../javascript/jqueryUI/jquery.ui.mouse.js" type="text/javascript" ></script>
+        <script src="../javascript/jqueryUI/jquery.ui.draggable.js" type="text/javascript" ></script>
+        <script src="../javascript/jqueryUI/jquery.ui.draggable.js" type="text/javascript" ></script>
+        <script src="../javascript/jqueryUI/jquery.ui.dialog.js" type="text/javascript" ></script>
+        <script src="../javascript/jqueryUI/jquery.effects.core.js" type="text/javascript" ></script>
+        <script src="../javascript/jqueryUI/jquery.effects.highlight.js" type="text/javascript" ></script>
+
+        <style type="text/css">
+            body div { font-size: 62.5%; }
+            label, input { display:block; }
+            input.text { margin-bottom:12px; width:95%; padding: .4em; }
+            fieldset { padding:0; border:0; margin-top:25px; }
+            h1 { font-size: 1.2em; margin: .6em 0; }
+            div#users-contain {  width: 350px; margin: 20px 0; }
+            div#users-contain table { margin: 1em 0; border-collapse: collapse; width: 100%; }
+            div#users-contain table td, div#users-contain table th { border: 1px solid #eee; 
+				padding: .6em 10px; text-align: left; }
+            .ui-button { outline: 0; margin:0; padding: .4em 1em .5em; text-decoration:none;
+	  			!important; cursor:pointer; position: relative; text-align: center; }
+            .ui-dialog .ui-state-highlight, .ui-dialog .ui-state-error { padding: .3em;  }
+        </style>
+        <script type="text/javascript">
+
+            $(function() {
+
+                var name = $("#name"),
+                email = $("#email"),
+                phone = $("#phone"),
+                allFields = $([]).add(name).add(email).add(phone),
+                tips = $("#validateTips");
+
+                function updateTips(t) {
+                    tips.text(t).effect("highlight",{},1500);
+                }
+
+                function checkLength(o,n,min,max) {
+
+                    if ( o.val().length > max || o.val().length < min ) {
+                        o.addClass('ui-state-error');
+                        updateTips("Length of " + n + " must be between "+min+" and "+max+".");
+                        return false;
+                    } else {
+                        return true;
+                    }
+
+                }
+
+                $("#dialog").dialog({
+                    bgiframe: true,
+                    autoOpen: false,
+                    height: 300,
+                    modal: true,
+                    buttons: {
+                        'Add a Contact': function() {
+                            var bValid = true;
+                            allFields.removeClass('ui-state-error');
+
+                            bValid = bValid && checkLength(name,"username",3,16);
+                            bValid = bValid && checkLength(email,"email",6,80);
+                            bValid = bValid && checkLength(phone,"phone",7,12);
+
+                            if (bValid) {
+                                $('#contacts tbody').append('<tr>' +
+                                    '<td>' + name.val() + '</td>' +
+                                    '<td>' + phone.val() + '</td>' +
+                                    '<td>' + email.val() + '</td>' +
+                                    '</tr>');
+                                $(this).dialog('close');
+                                $('#contacts tr:last').effect("highlight",{},1500)
+                            }
+                        },
+                        Cancel: function() {
+                            $(this).dialog('close');
+                        }
+                    },
+                    close: function() {
+                        allFields.val('').removeClass('ui-state-error');
+                    }
+                });
+
+
+
+                $('#create-user').click(function() {
+                    $('#dialog').dialog('open');
+                })
+                .hover(
+                function(){
+                    $(this).addClass("ui-state-hover");
+                },
+                function(){
+                    $(this).removeClass("ui-state-hover");
+                }
+                ).mousedown(function(){
+                    $(this).addClass("ui-state-active");
+                })
+                .mouseup(function(){
+                    $(this).removeClass("ui-state-active");
+                });
+
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Really Simple Address Book</h1>
+        <table id="contacts">
+            <tbody>
+                <tr><th>Name</th><th>Phone</th><th>Email</th></tr>
+                <tr><td>Scott Davis</td><td>555.1122</td><td>scott@nospam.com</td></tr>
+                <tr><td>Venkat Subramaniam</td><td>444.3333</td><td>ramnikat@nospam.com</td></tr>
+                <tr><td>David Hussman</td><td>333.1122</td><td>dh@nospam.com</td></tr>
+                <tr><td>Charles Nutter</td><td>777.1122</td><td>jrubyrulz@nospam.com</td></tr>
+            </tbody>
+        </table>
+        <button id="create-user" class="ui-button ui-state-default ui-corner-all">Add Contact</button>
+        <div id="dialog" title="Add new contact">
+            <p id="validateTips">All form fields are required.</p>
+
+            <form>
+                <fieldset>
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all" />
+                    <label for="password">Phone</label>
+                    <input type="text" name="phone" id="phone" value="" 
+						class="text ui-widget-content ui-corner-all" />
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" value="" 
+						class="text ui-widget-content ui-corner-all" />
+                </fieldset>
+            </form>
+        </div>
+    </body>
+</html>

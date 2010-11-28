@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>Suggest Example - jQuery</title>
+    <link type="text/css" href="../themes/ui-lightness/jquery.ui.all.css" rel="stylesheet" />
+    <script src="../javascript/jquery.js" type="text/javascript"></script>
+    <script src="../javascript/jqueryUI/jquery.ui.core.js" type="text/javascript"></script>
+    <script src="../javascript/jqueryUI/jquery.ui.widget.js" type="text/javascript"></script>
+    <script src="../javascript/jqueryUI/jquery.ui.autocomplete.js" type="text/javascript"></script>
+    <script src="../javascript/jqueryUI/jquery.ui.position.js" type="text/javascript"></script>
+    <script type="text/javascript">
+	$(function() {
+		var iceCream = ["Vanilla", "Chocolate", "Butter pecan", "Strawberry", "Neapolitan", "Chocolate chip", "French vanilla", "Cookies and cream", "Vanilla fudge ripple", "Praline pecan", "Cherry", "Chocolate almond", "Coffee", "Rocky road", "Chocolate marshmallow"];
+
+        $("#iceCream").autocomplete({
+			source: iceCream
+		});
+	});
+
+    </script>
+</head>
+  <body>
+    <h1>Really Simple Address Book</h1>
+    <form>
+    <table>
+      <tbody>
+        <tr><td>Name: </td><td><input type="text" name="name"/></td></tr>
+        <tr><td>Email: </td><td><input type="text" name="email"/></td></tr>
+        <tr><td>Phone: </td><td><input type="text" name="phone"/></td></tr>
+        <tr><td>Street: </td><td><input type="text" name="street"/></td></tr>
+        <tr>
+          <td>City: </td><td><input type="text" name="city"/></td>
+          <td>State: </td>
+          <td>
+            <input type="text" id="state" name="state" size="2" maxlength="2"/>
+            <div id="choices" class="autocomplete"></div>
+          </td>
+          <td>Zip: </td><td><input type="text" name="zip" size="5" maxlength="5"/></td>
+        </tr>
+        <tr>
+            <td>Website: </td><td><input type="text" name="website"/></td>
+        </tr>
+        <tr>
+          <td>IM: </td><td><input type="text" id="im"/></td>
+        </tr>
+        <tr>
+            <td>Favorite Ice Cream:</td><td><input class="ui-widget" type="text" id="iceCream"/></td>
+        </tr>
+      </tbody>
+    </table>
+    <input type="button" name="submit" value="Save"/>
+    </form>
+  </body>
+</html>

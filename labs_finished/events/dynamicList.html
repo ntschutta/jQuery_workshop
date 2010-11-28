@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>jQuery Live Example</title>
+</head>
+
+<body>
+	<h2>Live List</h2>
+	<p>jQuery's live() allows you to attach to handlers to current and <em>future</em> elements! For example, this list will allow you to add new elements but only by clicking the <em>first</em> item.</p>
+	<ul>
+	  <li class="clickme">Click me to add an item!</li>	
+	</ul>
+	<p>Even though the added list items have the right class, they aren't found because we already bound to elements. Let's use live() now!</p>
+	<ul>
+	  <li class="live-clickme">Click me to add an item!</li>	
+	</ul>
+	<p>Now, let's add an effect when the new item is added...</p>
+	<ul>
+	  <li class="clickme-effect">Click me to add an item!</li>	
+	</ul>
+		
+</body>
+<script src="../javascript/jquery.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    var newListItem = '<li class="clickme-effect">New Item...with effects!</li>';
+
+	$().ready(function() {
+		$('.clickme').click(function() {
+			$(this).parent().append('<li class="clickme">New Item</li>');
+		});
+		
+		$('.live-clickme').live('click', function() {
+			$(this).parent().append('<li class="live-clickme">New Item...thats clickable!</li>');
+		});		
+
+		
+		$('.clickme-effect').live('click', function() {
+			$(this).parent().append($('<li class="clickme-effect">New Item...with effects!</li>').fadeIn(1000));
+			//$(this).parent().append($(newListItem).fadeIn(1000));
+		});		
+	});
+</script>
+
+</html>

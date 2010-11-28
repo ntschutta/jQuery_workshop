@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>Sparklines</title> 
+    <script src="../javascript/jquery-1.4.3.js" type="text/javascript"></script>
+    <script src="../javascript/jquery.sparkline.js" type="text/javascript"></script>
+ 	<script type="text/javascript">
+    $(function() {
+        $('.sparkline').sparkline(); 
+
+        var vals = [10,8,5,7,4,4,1,3,5,4,3,4,6,8,2,9,10,4,7,8,3,6,7,3,9];
+        $('.passvalues').sparkline(vals);
+
+        $('.moreoptions').sparkline(vals, {type: 'bar', barColor: 'green'} );
+
+		var negativeVals = [1,4,4,-7,5,9,-10,8,6,-7,5,-4,6,3,-7,1,6,-7,-4,3,5];
+        $('.anotheroption').sparkline(negativeVals, {type: 'bar', barColor: "green"});
+
+        $('.discrete').sparkline('html', {type: 'discrete'} );
+    });
+    </script>
+</head> 
+<body>
+	<h2>Sparklines</h2>
+	<p>Sparklines allows to display large amounts of data in a small space.</p>
+	<p>For example: <span class="sparkline">1,4,4,7,5,9,10,8,6,7,5,4,6,3,7,1,6,7,4,3,5</span></p>
+	<p>Another option: <span class="passvalues"></span></p>
+	<p>More options: <span class="moreoptions"></span></p>
+	<p>Yet more options: <span class="anotheroption"></span></p>
+	<p>Discrete: <span class="discrete">1,4,4,7,5,9,10,8,6,7,5,4,6,3,7,1,6,7,4,3,5</span></p>
+</body>
+</html>
+
+

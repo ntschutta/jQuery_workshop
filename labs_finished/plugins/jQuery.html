@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>Validation Example</title>
+     <script src="../javascript/jquery.js" type="text/javascript"></script>
+ </head>
+  <body>
+    <h1>Really Simple Address Book</h1>
+    <div></div>
+    <div>Some Stuff</div>
+    <div><h3>Hello</h3></div>
+    <form>
+    <table>
+      <tbody>
+        <tr><td>Name: </td><td><input type="text" name="name"/></td></tr>
+        <tr><td>Email: </td><td><input type="text" name="email"/></td></tr>
+        <tr><td>Phone: </td><td><input type="text" name="phone"/></td></tr>
+        <tr><td>Street: </td><td><input type="text" name="street"/></td></tr>
+        <tr>
+          <td>City: </td><td><input type="text" id="city" name="city"/></td>
+          <td>State: </td><td><input type="text" id="state" name="state" size="2" maxlength="2"/></td>
+          <td>Zip: </td><td><input type="text" id="zip" name="zip" size="5" maxlength="5"/></td>
+        </tr>
+        <tr>
+            <td>Website: </td><td><input type="text" name="website"/></td>
+        </tr>
+        <tr>
+          <td>IM: </td><td><input type="text" name="im"/></td>
+        </tr>
+      </tbody>
+    </table>
+    <input type="button" name="submit" value="Save"/>
+    <input type="button" value="Say Something" onclick="$.saySomething('jQuery is flexible!');"/>
+    <input type="button" value="Hi There" onclick="$.fn.sayHello();"/>
+    <input type="button" value="Hi There2" onclick="$.fn.sayHelloAgain();"/>
+    <input type="button" value="Tallest" onclick="alert(tallest);"/>
+    </form>
+  </body>
+  <script type="text/javascript">
+  </script>
+     <script type="text/javascript">
+
+        jQuery.fn.sayHello = function() {
+           alert("Hi There!");
+        };
+
+        (function( $ ){
+          $.fn.sayHelloAgain = function() {
+            alert("Hi There my friend!");
+          };
+        })( jQuery );
+
+        jQuery.saySomething = function(something) {
+            alert(something);
+        };
+
+        (function( $ ){
+          $.fn.maxHeight = function() {
+
+            var max = 0;
+
+            this.each(function() {
+              max = Math.max( max, $(this).height() );
+            });
+
+            return max;
+          };
+        })( jQuery );
+
+        var tallest = $('div').maxHeight(); // Returns the height of the tallest div
+
+        (function( $ ){
+
+          $.fn.lockDimensions = function( type ) {
+
+            return this.each(function() {
+
+              var $this = $(this);
+
+              if ( !type || type == 'width' ) {
+                $this.width( $this.width() );
+              }
+
+              if ( !type || type == 'height' ) {
+                $this.height( $this.height() );
+              }
+
+            });
+
+          };
+        })( jQuery );
+     </script>
+</html>
